@@ -29,34 +29,40 @@ public class OfficeStoreServlet extends HttpServlet {
         printWriter.println("<p align=\"center\">");
         printWriter.println("PRODUCTS");
         printWriter.println("</span>");
-        printWriter.println("<table border=1 align=\"center\">");
+
         try {
-            printWriter.println("<tr>" +
-                    "<th>Category name</th>" +
-                    "<th>ID</th>" +
-                    "<th>Type</th>" +
-                    "<th>Company</th>" +
-                    "<th>Purpose</th>" +
-                    "<th>Currency</th>" +
-                    "<th>Value</th>" +
-                    "</tr>");
+
             for (Category category : categoryList) {
+                printWriter.println("<table border=1 align=\"center\">");
+                printWriter.println("<caption>" +
+                        category.getNameCategory() +
+                        "</caption>");
+                printWriter.println("<tr>" +
+                        //"<th>Category name</th>" +
+                        "<th>ID</th>" +
+                        "<th>Type</th>" +
+                        "<th>Company</th>" +
+                        "<th>Purpose</th>" +
+                        "<th>Currency</th>" +
+                        "<th>Value</th>" +
+                        "</tr>");
                 printWriter.println("<tr>");
-                printWriter.println("<td>" + category.getNameCategory() + "</td>");
+                //printWriter.println("<td>" + category.getNameCategory() + "</td>");
                 for (Product product : category.getListProducts()) {
-                    printWriter.println("<td>" + product.getId() + "</td>");
+                    printWriter.println("<tr><td>" + product.getId() + "</td>");
                     printWriter.println("<td>" + product.getType() + "</td>");
                     printWriter.println("<td>" + product.getCompany() + "</td>");
                     printWriter.println("<td>" + product.getPurpose() + "</td>");
                     printWriter.println("<td>" + product.getCost().getCurrency() + "</td>");
-                    printWriter.println("<td>" + product.getCost().getValue() + "</td>");
+                    printWriter.println("<td>" + product.getCost().getValue() + "</td></tr>");
                 }
                 printWriter.println("</tr>");
+                printWriter.println("</table>");
             }
         } catch (Exception e) {
             throw new ServletException(e);
         }
-        printWriter.println("</table>");
+
 
     }
 }
