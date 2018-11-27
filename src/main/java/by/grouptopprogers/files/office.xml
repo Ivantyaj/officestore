@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<!--<office xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="file.xsd">-->
+<!--связывает документ с таблицей стилей XSL-->
+<!--office.xml -->
+<office name="chancellery">
+    <category name="Бумага">
+        <product id="1">
+            <type>Офисная</type>
+            <company>Xerox</company>
+            <country>Германия</country>
+            <purpose>Белая</purpose>
+            <cost currency="руб.">5</cost>
+        </product>
+            <product id="2">
+            <type>Офисная</type>
+             <company>Xerox</company>
+            <country>Германия</country>
+            <purpose>Цветная</purpose>
+            <cost currency="руб.">7</cost>
+        </product>
+        <product id="3">
+            <type>Самоклеящаяся</type>
+            <company>"Xipu"</company>
+            <country>Китай</country>
+            <purpose>Цветная</purpose>
+            <cost currency="руб.">2</cost>
+        </product>
+    </category>
+    <category name="письменные принадлежности">
+            <product id="1">
+            <type>Ручка</type>
+            <company>Maped</company>
+            <country>Китай</country>
+            <purpose>Гелевая</purpose>
+            <cost currency="руб.">2</cost>
+        </product>
+        <product id="2">
+            <type>Ручка</type>
+            <company>Deroks</company>
+            <country>Китай</country>
+            <purpose>Шариковая</purpose>
+            <cost currency="руб.">3</cost>
+        </product>
+        <product id="3">
+            <type>Карандаш</type>
+            <company>Koh-i-noor</company>
+            <country>Германия</country>
+            <purpose>Простой</purpose>
+            <cost currency="руб.">1</cost>
+        </product>
+        <product id="4">
+            <type>Карандаш</type>
+            <company>Koh-i-noor</company>
+            <country>Германия</country>
+            <purpose>Механический</purpose>
+            <cost currency="руб.">4</cost>
+        </product>
+            <product id="5">
+            <type>Линейка</type>
+            <company>Можга</company>
+            <country>Россия</country>
+            <purpose>Деревянная 15</purpose>
+            <cost currency="руб.">1</cost>
+        </product>
+        
+    </category>
+    <category name="Школьная продукция">
+        <product id="1">
+            <type>Тетрадь</type>
+            <company>Topex</company>
+            <country>Китай</country>
+            <purpose>На спирали</purpose>
+            <cost currency="руб.">11</cost>
+        </product>
+        <product id="2">
+            <type>Тетрадь</type>
+            <company>Topex</company>
+            <country>Китай</country>
+            <purpose>На скрепке</purpose>
+            <cost currency="руб.">2</cost>
+        </product>
+        <product id="3">
+            <type>Альбом</type>
+            <company>Topex</company>
+            <country>Китай</country>
+            <purpose>Для черчения</purpose>
+            <cost currency="руб.">8</cost>
+        </product>
+            <product id="4">
+            <type>Альбом</type>
+            <company>Topex</company>
+            <country>Китай</country>
+            <purpose>Для рисования</purpose>
+            <cost currency="руб.">8</cost>
+        </product>
+    </category>
+    <category name="товары для творчества">
+        <product id="1">
+            <type>Краска</type>
+            <company>Maped</company>
+            <country>Россия</country>
+            <purpose>Акварель</purpose>
+            <cost currency="руб.">11</cost>
+        </product>
+        <product id="2">
+            <type>Краска</type>
+            <company>Maped</company>
+            <country>Россия</country>
+            <purpose>Гуашь</purpose>
+            <cost currency="руб.">11</cost>
+        </product>
+        <product id="3">
+            <type>Кисть</type>
+            <company>Maped</company>
+            <country>Россия</country>
+            <purpose>Искусственная</purpose>
+            <cost currency="руб.">2</cost>
+        </product>
+        <product id="4">
+            <type>Кисть</type>
+            <company>Maped</company>
+            <country>Россия</country>
+            <purpose>Натуральная</purpose>
+            <cost currency="руб.">4</cost>
+        </product>
+    </category>
+    <category name="товары для организации рабочего места">
+        <product id="1">
+            <type>Органайзер</type>
+            <company>Copipapa</company>
+            <country>Польша</country>
+            <purpose>Маленький</purpose>
+            <cost currency="руб.">11</cost>
+        </product>
+        <product id="2">
+            <type>Органайзер</type>
+            <company>Copipapa</company>
+            <country>Польша</country>
+            <purpose>Большой</purpose>
+            <cost currency="руб.">21</cost>
+        </product>
+        <product id="3">
+            <type>Подставка</type>
+            <company>Copipapa</company>
+            <country>Польша</country>
+            <purpose>Для документов</purpose>
+            <cost currency="руб.">33</cost>
+        </product>
+            <product id="3">
+            <type>Подставка</type>
+            <company>Copipapa</company>
+            <country>Польша</country>
+            <purpose>Для книг</purpose>
+            <cost currency="руб.">33</cost>
+        </product>
+    </category>
+</office>
