@@ -19,6 +19,15 @@ import java.util.ArrayList;
 
 public class MyDOMparser implements Parseable {
 
+    private static MyDOMparser instance;
+
+    public static MyDOMparser getInstance() {
+        if (instance == null) {
+            instance = new MyDOMparser();
+        }
+        return instance;
+    }
+
     String fileName;
 
     public void setFileName(String fileName) {
