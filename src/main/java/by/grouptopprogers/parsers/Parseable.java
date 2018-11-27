@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public interface Parseable {
-    String DIRECTORY = "D:\\БГУИР 672302\\Курс 3\\Java\\officestore\\src\\main\\java\\by\\grouptopprogers\\files\\office.xml";
+    String DIRECTORY = "D:\\JavaProjects\\officestore\\src\\main\\java\\by\\grouptopprogers\\files\\office.xml";
     //String DIRECTORY = "src/main/java/by/grouptopprogers/files/office.xml";
 
     ArrayList<Category> parseFile() throws IOException, SAXException, ParserConfigurationException;
