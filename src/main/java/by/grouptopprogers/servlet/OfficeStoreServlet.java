@@ -51,6 +51,7 @@ public class OfficeStoreServlet extends HttpServlet {
                     printWriter.println("<td>" + product.getCost().getCurrency() + "</td>");
                     printWriter.println("<td>" + product.getCost().getValue() + "</td>");
                 }
+                printWriter.println("</tr>");
             }
         } catch (Exception e) {
             throw new ServletException(e);

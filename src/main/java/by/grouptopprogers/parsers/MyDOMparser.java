@@ -39,7 +39,8 @@ public class MyDOMparser implements Parseable {
         /**
          * xml file with data
          */
-        File file = new File(DIRECTORY + fileName);
+
+        File file = new File(DIRECTORY);
 
         /**
          * building document for parsing

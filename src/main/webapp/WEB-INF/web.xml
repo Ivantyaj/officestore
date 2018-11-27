@@ -5,12 +5,12 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-    <servlet-name>officestore</servlet-name>
+    <servlet-name>store</servlet-name>
     <servlet-class>by.grouptopprogers.servlet.OfficeStoreServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>officestore</servlet-name>
+    <servlet-name>store</servlet-name>
     <url-pattern>/store</url-pattern>
   </servlet-mapping>
 </web-app>
