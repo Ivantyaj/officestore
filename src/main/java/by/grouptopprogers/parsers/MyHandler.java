@@ -105,6 +105,8 @@ public class MyHandler extends DefaultHandler {
                 product.getCost().setValue(Double.valueOf(text));
                 break;
             }
+            default:
+                break;
         }
     }
 

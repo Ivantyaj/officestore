@@ -14,14 +14,11 @@ import java.util.ArrayList;
 
 public class MySAXparser implements Parseable {
 
-    String fileName;
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
     @Override
-    public ArrayList<Category> parseFile() throws SAXException, ParserConfigurationException, IOException {
+    public ArrayList<Category> parseFile()
+            throws SAXException,
+            ParserConfigurationException,
+            IOException {
 
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
         SAXParser saxParser = saxParserFactory.newSAXParser();
@@ -30,7 +27,7 @@ public class MySAXparser implements Parseable {
         MyHandler myHandler = new MyHandler();
 
         xmlReader.setContentHandler(myHandler);
-        xmlReader.parse(DIRECTORY + fileName);
+        xmlReader.parse(DIRECTORY);
 
         Office office = myHandler.getOffice();
 

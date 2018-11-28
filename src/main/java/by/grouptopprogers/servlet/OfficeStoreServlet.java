@@ -15,19 +15,25 @@ import java.util.List;
 
 public class OfficeStoreServlet extends HttpServlet {
 
-    List<Category> categoryList = null;
+    private List<Category> categoryList = null;
 
     public void init() {
         try {
             categoryList = MyDOMparser.getInstance().parseFile();
 
-        } catch (SAXException | ParserConfigurationException | IOException e) {
+        } catch (SAXException
+                | ParserConfigurationException
+                | IOException e) {
             e.printStackTrace();
         }
     }
+
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request,
+                         HttpServletResponse response)
+            throws ServletException, IOException {
         request.setAttribute("categoryList", categoryList);
-        request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/index.jsp")
+                .forward(request, response);
     }
 }
