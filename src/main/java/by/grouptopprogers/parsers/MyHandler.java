@@ -117,7 +117,7 @@ public class MyHandler extends DefaultHandler {
                 //currentElement = null;
                 break;
             }
-            case CATEGORY_TAG:{
+            case CATEGORY_TAG: {
                 office.getCategoryList().add(category);
                 break;
             }

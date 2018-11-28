@@ -8,18 +8,19 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Info about Request </title>
+    <title>Store </title>
 </head>
 <body>
-<%
-    ArrayList<Category> categories;
-%>
-<table>
+<table border="1">
     <%for (Category category : (ArrayList<Category>) request.getAttribute("categoryList")) {%>
-<tr><%=category.getNameCategory()%></tr>
+    <tr>
+        <td><%=category.getNameCategory()%>
+        </td>
+    </tr>
     <p>
         <tr>
             <td>ID</td>
+            <td>Type</td>
             <td>Company</td>
             <td>Country</td>
             <td>Purpose</td>
@@ -29,6 +30,7 @@
     </p>
     <%for (Product product : category.getListProducts()) {%>
     <p>
+
         <tr>
             <td><%=product.getId()%>
             </td>
@@ -45,9 +47,8 @@
             <td><%=product.getCost().getCurrency()%>
             </td>
         </tr>
-
-
     </p>
+    <%--<br>--%>
     <%}%>
     <%}%>
 </table>
