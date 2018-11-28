@@ -20,26 +20,26 @@ public class TestParser {
     }
 
     @AfterClass
-    public static void clearAction(){
+    public static void clearAction() {
         domParser = null;
     }
 
-    @Ignore ("not ready yet")
+    @Ignore("not ready yet")
     @Test
     public void testHandler() throws ParserConfigurationException, SAXException, IOException {
         ArrayList<Category> categoryArrayList = null;
         //*****//
         //*****//
         //*****//
-        Assert.assertEquals(categoryArrayList,MyDOMparser.getInstance().parseFile());
+        Assert.assertEquals(categoryArrayList, MyDOMparser.getInstance().parseFile());
     }
 
-    @Test(timeout=100)
+    @Test(timeout = 100)
     public void testParseTime() throws ParserConfigurationException, SAXException, IOException {
         Assert.assertNotNull(MyDOMparser.getInstance().parseFile());
     }
 
-    @Test (expected = IndexOutOfBoundsException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testGetValue() throws ParserConfigurationException, SAXException, IOException {
         Assert.assertEquals(MyDOMparser.getInstance().parseFile().get(100).getNameCategory(), "Category");
     }

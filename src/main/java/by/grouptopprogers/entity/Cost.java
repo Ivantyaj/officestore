@@ -28,11 +28,5 @@ public class Cost {
         stringBuilder.append("\ncurrency : " + getCurrency());
         return stringBuilder.toString();
     }
-//    @Override
-//    public String toString() {
-//        return "Cost{" +
-//                "currency='" + currency + '\'' +
-//                ", value=" + value +
-//                '}';
-//    }
+
 }

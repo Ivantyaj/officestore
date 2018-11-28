@@ -1,7 +1,5 @@
 package by.grouptopprogers.entity;
 
-import by.grouptopprogers.entity.Cost;
-
 public class Product {
     private Integer id;
     private String type;
@@ -58,8 +56,8 @@ public class Product {
         this.country = country;
     }
 
-    public String[] toStringArray (){
-        return new String[] {String.valueOf(getId()),
+    public String[] toStringArray() {
+        return new String[]{String.valueOf(getId()),
                 getPurpose(),
                 getCompany(),
                 getType(),
@@ -69,25 +67,14 @@ public class Product {
     }
 
     @Override
-            public String toString() {
-                StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("\nid : " + getId());
-                stringBuilder.append("\ntype : " + getType());
-                stringBuilder.append("\ncompany : " + getCompany());
-                stringBuilder.append("\npurpose : " + getPurpose());
-                stringBuilder.append(getCost());
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\nid : " + getId());
+        stringBuilder.append("\ntype : " + getType());
+        stringBuilder.append("\ncompany : " + getCompany());
+        stringBuilder.append("\npurpose : " + getPurpose());
+        stringBuilder.append(getCost());
 
-                return stringBuilder.toString();
-            }
-//    @Override
-//    public String toString() {
-//        return "Product{" +
-//                "id=" + id +
-//                ", type='" + type + '\'' +
-//                ", company='" + company + '\'' +
-//                ", country='" + country + '\'' +
-//                ", purpose='" + purpose + '\'' +
-//                ", cost=" + cost.toString() +
-//                '}';
-//    }
+        return stringBuilder.toString();
+    }
 }
