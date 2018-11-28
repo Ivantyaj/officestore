@@ -1,6 +1,11 @@
 import by.grouptopprogers.entity.Cost;
 import by.grouptopprogers.entity.Product;
-import org.junit.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.Assert;
 
 
 public class TestData {

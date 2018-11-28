@@ -28,14 +28,11 @@ public class MyDOMparser implements Parseable {
         return instance;
     }
 
-    String fileName;
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
     @Override
-    public ArrayList<Category> parseFile() throws IOException, SAXException, ParserConfigurationException {
+    public ArrayList<Category> parseFile()
+            throws IOException,
+            SAXException,
+            ParserConfigurationException {
         /**
          * xml file with data
          */
@@ -49,12 +46,6 @@ public class MyDOMparser implements Parseable {
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
         Document document = documentBuilder.parse(file);
 
-        /**
-         * root element
-         */
-
-        Element root = document.getDocumentElement();
-        String officeName = root.getAttribute("name");
 
         NodeList nodeList = document.getElementsByTagName("category");
 
@@ -103,10 +94,14 @@ public class MyDOMparser implements Parseable {
                                         break;
                                     }
                                     case "cost": {
-                                        product.getCost().setValue(Double.valueOf(attribute.getTextContent()));
-                                        product.getCost().setCurrency(attribute.getAttribute("currency"));
+                                        product.getCost().setValue(
+                                                Double.valueOf(attribute.getTextContent()));
+                                        product.getCost().setCurrency(
+                                                attribute.getAttribute("currency"));
                                         break;
                                     }
+                                    default:
+                                        break;
 
                                 }
                             }
