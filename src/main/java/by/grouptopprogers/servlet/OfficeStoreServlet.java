@@ -1,6 +1,7 @@
 package by.grouptopprogers.servlet;
 
 import by.grouptopprogers.entity.Category;
+import by.grouptopprogers.entity.Product;
 import by.grouptopprogers.parsers.MyDOMparser;
 import org.xml.sax.SAXException;
 
@@ -11,17 +12,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-
 
 
 public class OfficeStoreServlet extends HttpServlet {
 
     List<Category> categoryList = null;
 
-    public void init() throws ServletException {
+    public void init() {
         try {
             categoryList = MyDOMparser.getInstance().parseFile();
+
         } catch (SAXException | ParserConfigurationException | IOException e) {
             e.printStackTrace();
         }
@@ -29,17 +31,22 @@ public class OfficeStoreServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       // response.setContentType("text/html");
-       // response.setCharacterEncoding("UTF-8");
-       // PrintWriter printWriter = response.getWriter();
+        System.out.println(categoryList);
+        // response.setContentType("text/html");
+        // response.setCharacterEncoding("UTF-8");
+        // PrintWriter printWriter = response.getWriter();
 //        List<Category> categoryList = null;
 //        try {
 //            categoryList = MyDOMparser.getInstance().parseFile();
 //        } catch (SAXException | ParserConfigurationException e) {
 //            e.printStackTrace();
 //        }
+//        System.out.println(categoryList);
+//        request.setAttribute("categoryList", categoryList);
+//        this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request,response);
+
         request.setAttribute("categoryList", categoryList);
-        this.getServletContext().getRequestDispatcher("WEB-INF/index.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);
 
 //                request.getSergetCgetRequestDispatcher("WEB-INF/index.jsp");
 //        rd.forward(request, response);
